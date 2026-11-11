@@ -36,3 +36,13 @@ match_obj= phone_pattern.search('Call me at 415-555-1011 tomorrow. 415-555-9999 
 print(f'Dung search + match_obj.group() :{match_obj.group()}')
 
 print(f'Dung findall(): {phone_pattern.findall('Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.')}.')
+
+
+#lay 1 phan area code cua sdt
+
+one_pattern= re.compile(r'(\d{3})-(\d{3}-\d{4})')
+match_obj = one_pattern.search('Call me at 415-555-1011')
+
+print(f'415-555-1011 convert to {r"(\d{3})-(\d{3}-\d{4})"} \ngroup(1): {match_obj.group(1)}\ngroup(2): {match_obj.group(2)}\ngroup( ): {match_obj.group()}')
+
+print
