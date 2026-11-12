@@ -72,7 +72,7 @@ ple, enter the following into the interactive shell:
 """
 
 clean_text = re.sub(r'[^a-zA-Z0-9\s]', '', raw_text)
-pattern= re.compile(r'\w+\s')
+pattern= re.compile(r'\w+')
 new_text= pattern.findall(raw_text)
 print(clean_text)
 print(new_text)
